@@ -6,6 +6,8 @@
 package bandaaleatoria.logica;
 
 import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,6 +18,8 @@ public class Flauta extends Instrumento {
     @Override
     public void dibujar(Graphics g) {
         System.out.println("Dibujando la flauta");
+        Image img = new ImageIcon(this.getClass().getResource("../imagenes/flauta.png")) .getImage();
+        g.drawImage(img, 0, 0, null);
     }
 
     @Override
