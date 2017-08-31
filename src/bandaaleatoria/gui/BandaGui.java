@@ -16,6 +16,7 @@ public class BandaGui extends javax.swing.JFrame {
      */
     public BandaGui() {
         initComponents();
+        setBounds (0, 0, 800, 600);
     }
 
     /**
@@ -36,8 +37,8 @@ public class BandaGui extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(lienzo2, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 103, Short.MAX_VALUE))
+                .addComponent(lienzo2, javax.swing.GroupLayout.PREFERRED_SIZE, 924, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
