@@ -24,7 +24,7 @@ public class BandaAleatoria {
         int cantidadMusicos = rn.nextInt(15);
         
         b.crearBanda(cantidadMusicos);
-        b.tocarBanda();
+        b.tocarbanda();
         
     }
     

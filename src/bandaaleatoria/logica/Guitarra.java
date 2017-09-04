@@ -7,7 +7,14 @@ package bandaaleatoria.logica;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.swing.ImageIcon;
+
 
 /**
  *
@@ -24,7 +31,33 @@ public class Guitarra extends Instrumento{
 
     @Override
     public void tocar() {
-        System.out.println("Tocando la guitarra");
+        AudioInputStream sound = null;
+        try {
+            File soundFile = new File(this.getClass().getResource("../sonidos/guitarra.wav").toURI());
+
+            sound = AudioSystem.getAudioInputStream(soundFile);
+            // load the sound into memory (a Clip)
+            DataLine.Info info = new DataLine.Info(Clip.class, sound.getFormat());
+            Clip clip;
+
+            clip = (Clip) AudioSystem.getLine(info);
+
+            clip.open(sound);
+            // play the sound clip
+            clip.start();
+        } 
+        catch (Exception ex) {
+            ex.printStackTrace();
+        } 
+        finally {
+            try {
+                sound.close();
+            } 
+            catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+
     }
     
 }

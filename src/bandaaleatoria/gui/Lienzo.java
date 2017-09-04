@@ -27,6 +27,7 @@ public class Lienzo extends Canvas {
         
         b.crearBanda(cantidadMusicos);
         b.presentarBanda(g);
+        b.tocarbanda();
         
     }
     

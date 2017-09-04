@@ -49,9 +49,9 @@ public class Banda {
     
     }
     
-    public void tocarBanda(){
+    public void tocarbanda() {
         Iterator it = musicos.iterator();
-        while(it.hasNext()){
+        while (it.hasNext()) {
             Musico m = (Musico) it.next();
             m.tocarInstrumento();
         }
